@@ -37,14 +37,15 @@ const server = http.createServer((req, res) => {
 
   // 商品查詢 API - 支援價格區間篩選
   if (req.url.startsWith("/api/products") && req.method === "GET") {
-    // 準備 5 個 3C 產品
+    // 準備 7 個 3C 產品
     const products = [
       { id: 1, name: "手機", price: 12900 },
       { id: 2, name: "筆電", price: 32900 },
       { id: 3, name: "平板", price: 15900 },
       { id: 4, name: "耳機", price: 2990 },
       { id: 5, name: "螢幕", price: 6990 },
-       { id: 6, name: "Dell大螢幕", price: 12990 },
+      { id: 6, name: "Dell大螢幕", price: 12990 },
+      { id: 7, name: "MacBook", price: 55900}
     ];
 
     // 解析 URL 和 query 參數
